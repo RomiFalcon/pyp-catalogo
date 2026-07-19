@@ -1,0 +1,166 @@
+/* ============================================================
+   P&P DISTRIBUIDORA — Colors & Type foundations
+   Argentine wholesale distributor of healthy / "dietética" foods.
+   Warm, friendly, artisan. Terracotta + chocolate brown + cream.
+   ============================================================ */
+
+/* ---- Fonts -------------------------------------------------- */
+/* Fredoka — the real brand font (provided variable TTF).
+   Rounded geometric sans. Workhorse for headlines, UI, body. */
+@font-face {
+  font-family: "Fredoka";
+  src: url("fonts/Fredoka-Variable.ttf") format("truetype-variations");
+  font-weight: 300 700;
+  font-stretch: 75% 125%;
+  font-display: swap;
+}
+
+/* Anton  -> heavy condensed "poster" display (SUBSTITUTION, see README).
+   Kaushan Script -> brushy handwritten accent (SUBSTITUTION, see README). */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&display=swap");
+
+:root {
+  /* ---- Brand palette -------------------------------------- */
+  --pp-brown-900: #34190B;   /* deepest — heavy headlines on cream     */
+  --pp-brown-800: #43210F;   /* primary brown text                     */
+  --pp-brown-700: #5E3416;   /* logo wordmark / wheels                 */
+  --pp-brown-600: #7A4A24;   /* secondary brown text                   */
+
+  --pp-terracotta: #C0531C;  /* PRIMARY accent — buttons, bars, logo   */
+  --pp-terracotta-600: #A84514;  /* hover / darker terracotta            */
+  --pp-terracotta-700: #95400F; /* pressed terracotta                  */
+  --pp-orange-500: #DD7A2E;  /* bright highlight, script words, icons  */
+  --pp-orange-300: #EBA468;  /* soft orange tint                       */
+
+  /* ---- Warm neutrals -------------------------------------- */
+  --pp-cream:      #F5ECDB;  /* page background                        */
+  --pp-cream-card: #FBF4E7;  /* card / panel fill                      */
+  --pp-cream-200:  #EFE2CC;  /* hairlines, dividers, soft borders      */
+  --pp-cream-300:  #E4D2B4;  /* stronger warm border                   */
+  --pp-white:      #FFFFFF;
+  --pp-ink-soft:   #6B5640;  /* muted warm-grey body text              */
+
+  /* ---- Sub-brand & semantic accents ----------------------- */
+  --pp-honey:    #F3A91E;    /* Mom's / honey yellow (tertiary)        */
+  --pp-leaf:     #5E8C3A;    /* "natural / plant-based" green          */
+  --pp-leaf-700: #436626;
+  --pp-seal:     #111111;    /* AR "Exceso en…" octagon black          */
+
+  /* ---- Type families -------------------------------------- */
+  --pp-font-brand:   "Fredoka", system-ui, "Segoe UI", sans-serif;
+  --pp-font-display: "Anton", "Fredoka", sans-serif; /* condensed poster */
+  --pp-font-script:  "Kaushan Script", cursive;      /* brush accent     */
+
+  /* ---- Type scale (rem @16px base) ------------------------ */
+  --pp-text-xs:  0.75rem;   /* 12 — legal, captions          */
+  --pp-text-sm:  0.875rem;  /* 14 — meta, labels             */
+  --pp-text-base:1rem;      /* 16 — body                     */
+  --pp-text-lg:  1.25rem;   /* 20 — lead body                */
+  --pp-text-xl:  1.625rem;  /* 26 — card titles              */
+  --pp-text-2xl: 2.25rem;   /* 36 — section heads            */
+  --pp-text-3xl: 3.25rem;   /* 52 — hero (Fredoka)           */
+  --pp-text-poster: 5rem;   /* 80 — Anton poster headline    */
+
+  --pp-leading-tight: 0.95;
+  --pp-leading-snug:  1.12;
+  --pp-leading-body:  1.5;
+
+  /* ---- Spacing (4px base) --------------------------------- */
+  --pp-space-1: 4px;
+  --pp-space-2: 8px;
+  --pp-space-3: 12px;
+  --pp-space-4: 16px;
+  --pp-space-5: 24px;
+  --pp-space-6: 32px;
+  --pp-space-7: 48px;
+  --pp-space-8: 64px;
+
+  /* ---- Radii ---------------------------------------------- */
+  --pp-radius-sm:  8px;
+  --pp-radius-md:  16px;
+  --pp-radius-lg:  24px;   /* default card                    */
+  --pp-radius-xl:  32px;   /* big promo panels                */
+  --pp-radius-pill: 999px; /* buttons, chips, badges          */
+
+  /* ---- Borders -------------------------------------------- */
+  --pp-border-soft: 1.5px solid var(--pp-cream-300);
+  --pp-border-brand: 2.5px solid var(--pp-brown-800);   /* outline cards */
+
+  /* ---- Shadows (warm, soft) ------------------------------- */
+  --pp-shadow-sm: 0 2px 6px rgba(67, 33, 15, 0.08);
+  --pp-shadow-md: 0 8px 22px rgba(67, 33, 15, 0.12);
+  --pp-shadow-lg: 0 18px 44px rgba(52, 25, 11, 0.18);
+
+  /* ---- Motion --------------------------------------------- */
+  --pp-ease: cubic-bezier(0.34, 1.32, 0.46, 1); /* @kind other */ /* gentle overshoot */
+  --pp-ease-out: cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --pp-dur: 0.22s; /* @kind other */
+}
+
+/* ============================================================
+   SEMANTIC TYPE ELEMENTS — apply .pp-* or use as a reference
+   ============================================================ */
+.pp-poster {           /* the "¿TENÉS UNA DIETÉTICA?" / "WRAP" look */
+  font-family: var(--pp-font-display);
+  font-size: var(--pp-text-poster);
+  line-height: var(--pp-leading-tight);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--pp-brown-900);
+}
+.pp-h1 {
+  font-family: var(--pp-font-brand);
+  font-weight: 700;
+  font-size: var(--pp-text-3xl);
+  line-height: var(--pp-leading-snug);
+  color: var(--pp-brown-800);
+}
+.pp-h2 {
+  font-family: var(--pp-font-brand);
+  font-weight: 600;
+  font-size: var(--pp-text-2xl);
+  line-height: var(--pp-leading-snug);
+  color: var(--pp-brown-800);
+}
+.pp-h3 {
+  font-family: var(--pp-font-brand);
+  font-weight: 600;
+  font-size: var(--pp-text-xl);
+  line-height: 1.2;
+  color: var(--pp-brown-800);
+}
+.pp-script {           /* brush accent word, e.g. "variedad" */
+  font-family: var(--pp-font-script);
+  font-weight: 400;
+  color: var(--pp-orange-500);
+  font-size: 1.15em;
+  line-height: 1;
+}
+.pp-lead {
+  font-family: var(--pp-font-brand);
+  font-weight: 400;
+  font-size: var(--pp-text-lg);
+  line-height: var(--pp-leading-body);
+  color: var(--pp-brown-700);
+}
+.pp-body {
+  font-family: var(--pp-font-brand);
+  font-weight: 400;
+  font-size: var(--pp-text-base);
+  line-height: var(--pp-leading-body);
+  color: var(--pp-ink-soft);
+}
+.pp-label {            /* uppercase eyebrow / chip text */
+  font-family: var(--pp-font-brand);
+  font-weight: 600;
+  font-size: var(--pp-text-sm);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pp-terracotta);
+}
+.pp-legal {
+  font-family: var(--pp-font-brand);
+  font-weight: 400;
+  font-size: var(--pp-text-xs);
+  color: var(--pp-ink-soft);
+}

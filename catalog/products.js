@@ -130,17 +130,15 @@ window.PYP_CATALOG = {
 
     // ---- Alfajores ----
     { id: "ar-alfajor", cat: "alfajores", brand: "Arroyito", name: "Alfajores Arroyito", img: R("assets/catalog-pub/arroyito-alfajores.png"), desc: "Alfajores artesanales. Elegí la variedad.", tags: ["Artesanal"], variants: ["Bomba", "Dinámico", "Molotov"] },
-    { id: "ch-alfajores", cat: "alfajores", brand: "Chok", name: "Alfajores Chok", img: R("assets/catalog-pub/chok-chocolate.png"), desc: "Alfajores artesanales, pote de ~200 g. Elegí la variedad.", tags: ["Artesanal", "~200 g"], variants: [
-      { name: "Chocolate", img: R("assets/catalog-pub/chok-chocolate.png") },
-      { name: "Chocolate con chispas", img: R("assets/catalog-pub/chok-chispas.png") },
-      { name: "Chocolate con praline", img: R("assets/catalog-pub/chok-praline.png") },
-      { name: "Praline blanco", img: R("assets/catalog-pub/chok-praline-blanco.png") },
-      { name: "Glaseados", img: R("assets/catalog-pub/chok-glaseados.png") },
-      { name: "Impalpable", img: R("assets/catalog-pub/chok-impalpables.png") },
-      { name: "Maicena", img: R("assets/catalog-pub/chok-maicena.png") },
-      { name: "Mixtos", img: R("assets/catalog-pub/chok-mixtos.png") },
-      { name: "Conitos", img: R("assets/catalog-pub/chok-conitos.png") },
-    ] },
+    { id: "ch-chocolate", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Chocolate", img: R("assets/catalog-pub/chok-chocolate.png"), desc: "Alfajor artesanal sabor chocolate, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
+    { id: "ch-chispas", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Chocolate con Chispas", img: R("assets/catalog-pub/chok-chispas.png"), desc: "Alfajor artesanal con chispas de chocolate, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
+    { id: "ch-praline", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Chocolate con Praliné", img: R("assets/catalog-pub/chok-praline.png"), desc: "Alfajor artesanal con praliné, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
+    { id: "ch-praline-blanco", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Praliné Blanco", img: R("assets/catalog-pub/chok-praline-blanco.png"), desc: "Alfajor artesanal con praliné blanco, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
+    { id: "ch-glaseados", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Glaseado", img: R("assets/catalog-pub/chok-glaseados.png"), desc: "Alfajor artesanal glaseado, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
+    { id: "ch-impalpables", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Azúcar Impalpable", img: R("assets/catalog-pub/chok-impalpables.png"), desc: "Alfajor artesanal con azúcar impalpable, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
+    { id: "ch-maicena", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Maicena", img: R("assets/catalog-pub/chok-maicena.png"), desc: "Alfajor artesanal de maicena, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
+    { id: "ch-mixtos", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Mixto", img: R("assets/catalog-pub/chok-mixtos.png"), desc: "Alfajor artesanal surtido, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
+    { id: "ch-conitos", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Conitos", img: R("assets/catalog-pub/chok-conitos.png"), desc: "Alfajor artesanal con conitos, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
     { id: "altc-alfajor", cat: "alfajores", brand: "Altas Cumbres", name: "Alfajor Cordobés x12", img: R("assets/catalog-pub/altascumbres-variedades.png"), desc: "Caja de 12 alfajores cordobeses, elaboración artesanal. Elegí el sabor.", tags: ["x12", "Artesanal"], variants: ["Pera", "Higo", "Durazno", "Membrillo", "Leche"] },
 
     // ---- Pizzetas ----

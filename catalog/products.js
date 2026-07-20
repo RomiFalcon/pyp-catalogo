@@ -112,7 +112,10 @@ window.PYP_CATALOG = {
     { id: "mo-proteicas-surtidas", cat: "galletas", brand: "Mom's", name: "Galletas Proteicas Surtidas", img: R("assets/catalog-pub/moms-proteicas.png"), desc: "Caja de 10 unidades surtidas: Black, Dubai, Lemon Pie, Choco blanco y arándanos, Chocolate y nuez.", tags: ["Proteica", "12g proteína", "Vegano", "Caja x10 surtida"] },
 
     // ---- Snacks & Crackers ----
-    { id: "nc-var", cat: "snacks", brand: "Nutri Crack", name: "Crackers Integrales", img: R("assets/catalog-pub/nutricrack.png"), desc: "Crackers integrales 100% artesanales. Elegí el sabor.", tags: ["Integral", "Artesanal"], variants: ["Queso", "Capresse", "Semillas", "Semillas agridulces"] },
+    { id: "nc-queso", cat: "snacks", brand: "Nutri Crack", name: "Crackers Integrales Queso", img: R("assets/catalog-pub/nutricrack-queso.webp"), desc: "Crackers integrales 100% artesanales, sabor queso.", tags: ["Integral", "Artesanal"] },
+    { id: "nc-capresse", cat: "snacks", brand: "Nutri Crack", name: "Crackers Integrales Capresse", img: R("assets/catalog-pub/nutricrack-capresse.webp"), desc: "Crackers integrales 100% artesanales, sabor capresse.", tags: ["Integral", "Artesanal"] },
+    { id: "nc-semillas", cat: "snacks", brand: "Nutri Crack", name: "Crackers Integrales Semillas", img: R("assets/catalog-pub/nutricrack-semillas.webp"), desc: "Crackers integrales 100% artesanales, con semillas.", tags: ["Integral", "Artesanal"] },
+    { id: "nc-semillas-agridulces", cat: "snacks", brand: "Nutri Crack", name: "Cookies Integrales Semillas Agridulces", img: R("assets/catalog-pub/nutricrack-semillas-agridulces.webp"), desc: "Cookies integrales 100% artesanales, semillas agridulces.", tags: ["Integral", "Artesanal"] },
     { id: "no-mani", cat: "snacks", brand: "Nötter", name: "Maní con Cobertura", img: R("assets/catalog-pub/notter-mani.png"), desc: "Maní con cobertura sabrosa, 125 g. Elegí el sabor.", tags: ["Para picar"], variants: ["Salame", "Pizza", "Jamón y queso"] },
     { id: "rk-pochoclo", cat: "snacks", brand: "Rakan", name: "Pochoclo", img: R("assets/catalog-pub/rakan-pochoclo.jpeg"), desc: "Pochoclo liviano, 150 g. Ideal para el mostrador.", tags: ["Para picar", "150 g"] },
 
@@ -139,7 +142,7 @@ window.PYP_CATALOG = {
     { id: "ch-maicena", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Maicena", img: R("assets/catalog-pub/chok-maicena.png"), desc: "Alfajor artesanal de maicena, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
     { id: "ch-mixtos", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Mixto", img: R("assets/catalog-pub/chok-mixtos.png"), desc: "Alfajor artesanal surtido, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
     { id: "ch-conitos", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Conitos", img: R("assets/catalog-pub/chok-conitos.png"), desc: "Alfajor artesanal con conitos, pote de ~200 g.", tags: ["Artesanal", "~200 g"] },
-    { id: "altc-alfajor", cat: "alfajores", brand: "Altas Cumbres", name: "Alfajor Cordobés x12", img: R("assets/catalog-pub/altascumbres-variedades.png"), desc: "Caja de 12 alfajores cordobeses, elaboración artesanal. Elegí el sabor.", tags: ["x12", "Artesanal"], variants: ["Pera", "Higo", "Durazno", "Membrillo", "Leche"] },
+    { id: "altc-alfajor", cat: "alfajores", brand: "Altas Cumbres", name: "Alfajor Cordobés x12", img: R("assets/catalog-pub/altascumbres-variedades.png"), desc: "Caja de 12 alfajores cordobeses, elaboración artesanal. Elegí el sabor.", tags: ["x12", "Artesanal"], variants: ["Higo-Pera", "Dulce de leche", "Membrillo-Durazno"] },
 
     // ---- Pizzetas ----
     { id: "to-pizzetas", cat: "pizzetas", brand: "Tomatito", name: "Pizzetas de Tomate", img: R("assets/catalog-pub/tomatto-pizzetas.png"), desc: "Pizzetas de tomate listas para hornear. Venta mínima x120.", tags: ["x120", "Mayorista"] },

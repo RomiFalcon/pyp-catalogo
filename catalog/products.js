@@ -88,9 +88,10 @@ window.PYP_CATALOG = {
     { id: "mm-parmesanitas", cat: "panificados", brand: "Masa Madre", name: "Parmesanitas", img: R("assets/catalog-pub/masamadre-parmesanitas.png"), desc: "Crackers de masa madre con queso, para picar.", tags: ["Artesanal", "Para picar"] },
     { id: "pz-arabe", cat: "panificados", brand: "Panez", name: "Pan Árabe", img: R("assets/catalog-pub/panez-arabe.png"), desc: "Clásico pan pita para rellenar.", tags: ["Práctico"] },
     { id: "pz-arabe-int", cat: "panificados", brand: "Panez", name: "Pan Árabe Integral", img: R("assets/catalog-pub/panez-arabe-integral.png"), desc: "Versión integral, fuente de fibra.", tags: ["Integral", "Con fibra"] },
-    { id: "pz-molde", cat: "panificados", brand: "Panez", name: "Pan de Molde Grande", img: R("assets/catalog-pub/panez-molde.png"), desc: "Rinde más por unidad, para sándwiches. Elegí la variedad.", tags: ["Rinde más"], variants: ["Blanco", "Integral", "Con salvado"] },
     { id: "pz-sand", cat: "panificados", brand: "Panez", name: "Pan Sandwichero", img: R("assets/catalog-pub/panez-sandwichero.png"), desc: "Tierno y parejo, sin orillas duras.", tags: ["Práctico"] },
-    { id: "pz-centeno", cat: "panificados", brand: "Panez", name: "Pan de Centeno", img: R("assets/catalog-pub/panez-centeno.png"), desc: "Centeno de sabor intenso y aroma profundo.", tags: ["Integral"] },
+    { id: "pz-molde-centeno", cat: "panificados", brand: "Panez", name: "Pan de Molde Centeno", img: R("assets/catalog-pub/panez-molde-centeno.webp"), desc: "Pan de molde en fetas, sabor centeno. Rinde más por unidad, para sándwiches.", tags: ["Rinde más", "Integral"] },
+    { id: "pz-molde-salvado", cat: "panificados", brand: "Panez", name: "Pan de Molde con Salvado", img: R("assets/catalog-pub/panez-molde-salvado.webp"), desc: "Pan de molde en fetas con salvado. Rinde más por unidad, para sándwiches.", tags: ["Rinde más", "Con fibra"] },
+    { id: "pz-molde-integral", cat: "panificados", brand: "Panez", name: "Pan de Molde Integral", img: R("assets/catalog-pub/panez-molde-integral.webp"), desc: "Pan de molde en fetas integral. Rinde más por unidad, para sándwiches.", tags: ["Rinde más", "Integral"] },
     { id: "pa-chips", cat: "panificados", brand: "Pazzi", name: "Chips Pazzi", img: R("assets/catalog-pub/pazzi-chips.png"), desc: "Chips de pan de papa, para picar. Elegí la variedad.", tags: ["Pan de papa", "Para picar"], variants: [{ name: "Con queso", img: R("assets/catalog-pub/pazzi-chips.png") }, { name: "Tradicional", img: R("assets/catalog-pub/pazzi-chips-tradicional.png") }] },
 
     // ---- Pazzi ----
@@ -118,6 +119,8 @@ window.PYP_CATALOG = {
     { id: "nc-semillas-agridulces", cat: "snacks", brand: "Nutri Crack", name: "Cookies Integrales Semillas Agridulces", img: R("assets/catalog-pub/nutricrack-semillas-agridulces.webp"), desc: "Cookies integrales 100% artesanales, semillas agridulces.", tags: ["Integral", "Artesanal"] },
     { id: "no-mani", cat: "snacks", brand: "Nötter", name: "Maní con Cobertura", img: R("assets/catalog-pub/notter-mani.png"), desc: "Maní con cobertura sabrosa, 125 g. Elegí el sabor.", tags: ["Para picar"], variants: ["Salame", "Pizza", "Jamón y queso"] },
     { id: "rk-pochoclo", cat: "snacks", brand: "Rakan", name: "Pochoclo", img: R("assets/catalog-pub/rakan-pochoclo.jpeg"), desc: "Pochoclo liviano, 150 g. Ideal para el mostrador.", tags: ["Para picar", "150 g"] },
+    { id: "ch-mani-chocolate", cat: "snacks", brand: "Chok", name: "Maní con Chocolate Chok", img: R("assets/catalog-pub/chok-mani-chocolate.webp"), desc: "Maní bañado en chocolate, aprox. 120 g.", tags: ["Para picar", "120 g"] },
+    { id: "ch-bocaditos", cat: "snacks", brand: "Chok", name: "Bocaditos Chok", img: R("assets/catalog-pub/chok-bocaditos.webp"), desc: "Bocaditos bañados en chocolate, aprox. 95 g, 10 unidades.", tags: ["Para picar", "x10"] },
 
     // ---- Pastafrolas & Dulces ----
     { id: "ac-brownie", cat: "dulces", brand: "AC Artesanal", name: "Pastafrola Sabor Brownie", img: R("assets/catalog-pub/ac-frola-brownie.png"), desc: "Masa de cacao, intensa. Sin conservantes.", tags: ["Artesanal", "Sin conservantes"] },
@@ -145,7 +148,7 @@ window.PYP_CATALOG = {
     { id: "altc-alfajor", cat: "alfajores", brand: "Altas Cumbres", name: "Alfajor Cordobés x12", img: R("assets/catalog-pub/altascumbres-variedades.png"), desc: "Caja de 12 alfajores cordobeses, elaboración artesanal. Elegí el sabor.", tags: ["x12", "Artesanal"], variants: ["Higo-Pera", "Dulce de leche", "Membrillo-Durazno"] },
 
     // ---- Pizzetas ----
-    { id: "to-pizzetas", cat: "pizzetas", brand: "Tomatito", name: "Pizzetas de Tomate", img: R("assets/catalog-pub/tomatto-pizzetas.png"), desc: "Pizzetas de tomate listas para hornear. Venta mínima x120.", tags: ["x120", "Mayorista"] },
+    { id: "to-pizzetas", cat: "pizzetas", brand: "Tomatito", name: "Pizzetas de Tomate", img: R("assets/catalog-pub/tomatto-pizzetas.png"), desc: "Pizzetas de tomate listas para hornear. Vienen en paquete de 12 unidades, sin venta mínima.", tags: ["x12"] },
 
     // ---- Miel Pampa ----
     { id: "pm-solida", cat: "miel", brand: "Pampa", name: "Miel Pura Sólida", img: R("assets/catalog-pub/pampa-miel-solida.png"), desc: "Miel pura de pradera, cristalizada y untable. Elegí el tamaño. Se entrega por 6 unidades.", tags: ["100% natural", "x6"], variants: ["¼ kg", "½ kg", "1 kg"] },

@@ -77,8 +77,10 @@ function ProductCard({ p, cart, onAdd, onSub }) {
 function OrderDrawer({ open, onClose, cart, add, sub, clear }) {
   const [comercio, setComercio] = useState(() => localStorage.getItem("pyp_comercio") || "");
   const [zona, setZona] = useState(() => localStorage.getItem("pyp_zona") || "");
+  const [comentario, setComentario] = useState(() => localStorage.getItem("pyp_comentario") || "");
   useEffect(() => { localStorage.setItem("pyp_comercio", comercio); }, [comercio]);
   useEffect(() => { localStorage.setItem("pyp_zona", zona); }, [zona]);
+  useEffect(() => { localStorage.setItem("pyp_comentario", comentario); }, [comentario]);
   const items = Object.keys(cart).map(key => { const [id, variant] = splitKey(key); return { key, p: DATA.products.find(x => x.id === id), variant, q: cart[key] }; }).filter(x => x.p);
   const count = items.reduce((a, b) => a + b.q, 0);
 
@@ -91,7 +93,8 @@ function OrderDrawer({ open, onClose, cart, add, sub, clear }) {
     });
     msg += `Total: ${count} ${count === 1 ? "ítem" : "ítems"}.\n`;
     if (comercio) msg += `Comercio: ${comercio}.\n`;
-    if (zona) msg += `Zona: ${zona}.`;
+    if (zona) msg += `Zona: ${zona}.\n`;
+    if (comentario) msg += `Comentario: ${comentario}.`;
     return `https://wa.me/${DATA.whatsapp}?text=${encodeURIComponent(msg)}`;
   };
 
@@ -138,6 +141,10 @@ function OrderDrawer({ open, onClose, cart, add, sub, clear }) {
             <div className="pp-field">
               <label>Zona / localidad</label>
               <input value={zona} onChange={e => setZona(e.target.value)} placeholder="Ej: Lomas de Zamora" />
+            </div>
+            <div className="pp-field">
+              <label>Comentario (opcional)</label>
+              <textarea value={comentario} onChange={e => setComentario(e.target.value)} placeholder="Ej: Preferís horario de entrega, aclaración del pedido, etc." rows={3} />
             </div>
             <a className="pp-wa" href={waMsg()} target="_blank" rel="noopener noreferrer">
               <i data-lucide="message-circle"></i> Enviar pedido por WhatsApp

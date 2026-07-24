@@ -24,10 +24,6 @@ const __RES_IDS = {
   "assets/catalog-pub/pazzi-burger-queso.png": "r17",
   "assets/catalog-pub/pazzi-burger-semillas.png": "r18",
   "assets/catalog-pub/pazzi-pebete.png": "r19",
-  "assets/catalog-pub/tibax-wraps.png": "r20",
-  "assets/catalog-pub/tibax-wraps-salvado.png": "r21",
-  "assets/catalog-pub/tibax-tortillas.png": "r22",
-  "assets/catalog-pub/tibax-tortillas-espinaca.png": "r23",
   "assets/catalog-pub/moms-variedades.png": "r24",
   "assets/catalog-pub/moms-proteicas.png": "r25",
   "assets/catalog-pub/nutricrack.png": "r26",
@@ -68,7 +64,6 @@ window.PYP_CATALOG = {
   categories: [
     { id: "panificados", name: "Panificados", icon: "wheat", blurb: "Masa madre, panes y chips artesanales de alta rotación." },
     { id: "pazzi", name: "Panes Pazzi", icon: "beef", blurb: "El auténtico pan de papa: buns y pebetes esponjosos." },
-    { id: "wraps", name: "Wraps & Tortillas", icon: "sandwich", blurb: "Tortillas y wraps grandes, listos para vender." },
     { id: "galletas", name: "Galletas de Avena", icon: "cookie", blurb: "Mom's: plant based, sin conservantes. Caja surtida y línea proteica." },
     { id: "snacks", name: "Snacks & Crackers", icon: "popcorn", blurb: "Para picar y para el mostrador. 100% artesanal." },
     { id: "dulces", name: "Pastafrolas & Dulces", icon: "cake", blurb: "Pastafrolas, pepas y galletitas artesanales." },
@@ -99,12 +94,6 @@ window.PYP_CATALOG = {
     { id: "pa-queso", cat: "pazzi", brand: "Pazzi", name: "Pan de Hamburguesa con Queso", img: R("assets/catalog-pub/pazzi-burger-queso.png"), desc: "Con queso en la superficie, dorado al horno.", tags: ["Pan de papa", "x4"] },
     { id: "pa-semillas", cat: "pazzi", brand: "Pazzi", name: "Pan de Hamburguesa con Semillas", img: R("assets/catalog-pub/pazzi-burger-semillas.png"), desc: "Topping de semillas, más textura.", tags: ["Pan de papa", "x4"] },
     { id: "pa-pebete", cat: "pazzi", brand: "Pazzi", name: "Pebetes", img: R("assets/catalog-pub/pazzi-pebete.png"), desc: "Pebetes de pan de papa, listos para rellenar.", tags: ["Pan de papa"] },
-
-    // ---- Wraps ----
-    { id: "tx-wraps", cat: "wraps", brand: "Tibax", name: "Wraps Originales", img: R("assets/catalog-pub/tibax-wraps.png"), desc: "Los más grandes. 6 unidades · 420 g.", tags: ["Con fibra", "x6"] },
-    { id: "tx-wraps-salv", cat: "wraps", brand: "Tibax", name: "Wraps con Salvado", img: R("assets/catalog-pub/tibax-wraps-salvado.png"), desc: "Más fibra para un almuerzo liviano.", tags: ["Con fibra", "x6"] },
-    { id: "tx-tort", cat: "wraps", brand: "Tibax", name: "Tortillas de Trigo", img: R("assets/catalog-pub/tibax-tortillas.png"), desc: "Tortilla clásica de trigo, versátil.", tags: ["Práctico"] },
-    { id: "tx-tort-esp", cat: "wraps", brand: "Tibax", name: "Tortillas Sabor Espinaca", img: R("assets/catalog-pub/tibax-tortillas-espinaca.png"), desc: "Con espinaca, color y sabor diferentes.", tags: ["Veggie"] },
 
     // ---- Galletas Mom's ----
     { id: "mo-surtidas", cat: "galletas", brand: "Mom's", name: "Galletas de Avena Surtidas", img: R("assets/catalog-pub/moms-variedades-hq.webp"), desc: "Caja de 10 unidades surtidas: chocolate, coco, granola, arándanos, mix de frutos secos, pasas de uva, maní con chocolate, cacao y naranja, limón y chocolate blanco.", tags: ["Plant based", "Caja x10 surtida"] },

@@ -19,11 +19,17 @@ function useCart() {
   return { cart, add, sub, clear, count, lines };
 }
 
-/* ---------- product card ---------- */
-// Las variantes pueden ser un string ("Queso") o un objeto { name, img }.
+/* ---------- price helpers ---------- */
+const priceFmt = new Intl.NumberFormat("es-AR", { maximumFractionDigits: 0 });
+function formatPrice(n) { return "$" + priceFmt.format(n); }
+// Las variantes pueden ser un string ("Queso"), o un objeto { name, img } y/o { name, price }.
+// Si la variante no trae price propio, se usa el precio base del producto.
 function variantName(v) { return typeof v === "string" ? v : v.name; }
 function variantImg(v) { return typeof v === "string" ? null : v.img; }
+function variantPrice(v) { return typeof v === "string" ? undefined : v.price; }
+function priceFor(p, selVar) { return (selVar && variantPrice(selVar)) ?? p.price; }
 
+/* ---------- product card ---------- */
 function ProductCard({ p, cart, onAdd, onSub }) {
   const [imgErr, setImgErr] = useState(false);
   const [variant, setVariant] = useState(p.variants ? variantName(p.variants[0]) : null);
@@ -32,6 +38,7 @@ function ProductCard({ p, cart, onAdd, onSub }) {
   // Si la variante elegida tiene foto propia, se muestra esa; si no, la general del producto.
   const selVar = p.variants && p.variants.find(v => variantName(v) === variant);
   const currentImg = (selVar && variantImg(selVar)) || p.img;
+  const currentPrice = priceFor(p, selVar);
   const showImg = currentImg && !imgErr;
   const pickVariant = name => { setVariant(name); setImgErr(false); };
   return (
@@ -44,6 +51,7 @@ function ProductCard({ p, cart, onAdd, onSub }) {
       </div>
       <div className="pp-card__body">
         <h3 className="pp-card__name">{p.name}</h3>
+        {currentPrice != null && <div className="pp-card__price">{formatPrice(currentPrice)}</div>}
         <p className="pp-card__desc">{p.desc}</p>
         {p.variants && (
           <div className="pp-variants" role="group" aria-label="Elegí la variedad">
@@ -81,17 +89,30 @@ function OrderDrawer({ open, onClose, cart, add, sub, clear }) {
   useEffect(() => { localStorage.setItem("pyp_comercio", comercio); }, [comercio]);
   useEffect(() => { localStorage.setItem("pyp_zona", zona); }, [zona]);
   useEffect(() => { localStorage.setItem("pyp_comentario", comentario); }, [comentario]);
-  const items = Object.keys(cart).map(key => { const [id, variant] = splitKey(key); return { key, p: DATA.products.find(x => x.id === id), variant, q: cart[key] }; }).filter(x => x.p);
+  const items = Object.keys(cart).map(key => {
+    const [id, variant] = splitKey(key);
+    const p = DATA.products.find(x => x.id === id);
+    if (!p) return { key, p: null };
+    const selVar = p.variants && p.variants.find(v => variantName(v) === variant);
+    const unitPrice = priceFor(p, selVar);
+    const q = cart[key];
+    return { key, p, variant, q, unitPrice, lineTotal: unitPrice != null ? unitPrice * q : null };
+  }).filter(x => x.p);
   const count = items.reduce((a, b) => a + b.q, 0);
+  const total = items.reduce((a, b) => a + (b.lineTotal || 0), 0);
 
   const waMsg = () => {
     let msg = "¡Hola P&P! 👋 Quiero hacer un pedido mayorista:\n\n";
     const byCat = {};
-    items.forEach(({ p, q, variant }) => { (byCat[p.cat] = byCat[p.cat] || []).push(`• ${q}x ${p.name}${variant ? ` — ${variant}` : ""} (${p.brand})`); });
+    items.forEach(({ p, q, variant, unitPrice, lineTotal }) => {
+      const priceStr = unitPrice != null ? ` — ${formatPrice(unitPrice)} c/u = ${formatPrice(lineTotal)}` : "";
+      (byCat[p.cat] = byCat[p.cat] || []).push(`• ${q}x ${p.name}${variant ? ` — ${variant}` : ""} (${p.brand})${priceStr}`);
+    });
     DATA.categories.forEach(c => {
       if (byCat[c.id]) { msg += `*${c.name}*\n` + byCat[c.id].join("\n") + "\n\n"; }
     });
     msg += `Total: ${count} ${count === 1 ? "ítem" : "ítems"}.\n`;
+    msg += `*Total a pagar: ${formatPrice(total)}*\n`;
     if (comercio) msg += `Comercio: ${comercio}.\n`;
     if (zona) msg += `Zona: ${zona}.\n`;
     if (comentario) msg += `Comentario: ${comentario}.`;
@@ -105,7 +126,7 @@ function OrderDrawer({ open, onClose, cart, add, sub, clear }) {
         <header className="pp-drawer__head">
           <div>
             <div className="pp-drawer__title">Tu pedido</div>
-            <div className="pp-drawer__sub">{count} {count === 1 ? "ítem" : "ítems"}</div>
+            <div className="pp-drawer__sub">{count} {count === 1 ? "ítem" : "ítems"}{total > 0 ? ` · ${formatPrice(total)}` : ""}</div>
           </div>
           <button className="pp-iconbtn" onClick={onClose} aria-label="Cerrar"><i data-lucide="x"></i></button>
         </header>
@@ -116,12 +137,13 @@ function OrderDrawer({ open, onClose, cart, add, sub, clear }) {
               <i data-lucide="shopping-basket"></i>
               <p>Tu pedido está vacío.<br />Agregá productos del catálogo.</p>
             </div>
-          ) : items.map(({ key, p, q, variant }) => (
+          ) : items.map(({ key, p, q, variant, unitPrice, lineTotal }) => (
             <div className="pp-line" key={key}>
               {p.img ? <img src={p.img} alt="" /> : <div className="pp-line__ph">{p.brand[0]}</div>}
               <div className="pp-line__info">
                 <div className="pp-line__name">{p.name}{variant ? <span className="pp-line__var"> · {variant}</span> : null}</div>
                 <div className="pp-line__brand">{p.brand}</div>
+                {unitPrice != null && <div className="pp-line__price">{formatPrice(unitPrice)} c/u · <b>{formatPrice(lineTotal)}</b></div>}
               </div>
               <div className="pp-stepper sm">
                 <button onClick={() => sub(key)}><i data-lucide="minus"></i></button>
@@ -134,6 +156,7 @@ function OrderDrawer({ open, onClose, cart, add, sub, clear }) {
 
         {items.length > 0 && (
           <div className="pp-drawer__foot">
+            <div className="pp-total"><span>Total del pedido</span><strong>{formatPrice(total)}</strong></div>
             <div className="pp-field">
               <label>Nombre del comercio</label>
               <input value={comercio} onChange={e => setComercio(e.target.value)} placeholder="Ej: Dietética La Huerta" />
@@ -161,6 +184,14 @@ function OrderDrawer({ open, onClose, cart, add, sub, clear }) {
 /* ---------- main app ---------- */
 function App() {
   const { cart, add, sub, clear, count } = useCart();
+  const total = useMemo(() => Object.keys(cart).reduce((sum, key) => {
+    const [id, variant] = splitKey(key);
+    const p = DATA.products.find(x => x.id === id);
+    if (!p) return sum;
+    const selVar = p.variants && p.variants.find(v => variantName(v) === variant);
+    const unitPrice = priceFor(p, selVar);
+    return sum + (unitPrice != null ? unitPrice * cart[key] : 0);
+  }, 0), [cart]);
   const [active, setActive] = useState("todos");
   const [query, setQuery] = useState("");
   const [drawer, setDrawer] = useState(false);
@@ -269,7 +300,7 @@ function App() {
       {/* mobile order FAB */}
       {count > 0 && (
         <button className="pp-fab" onClick={() => setDrawer(true)}>
-          <i data-lucide="shopping-basket"></i> Ver pedido · {count}
+          <i data-lucide="shopping-basket"></i> Ver pedido · {count} · {formatPrice(total)}
         </button>
       )}
 

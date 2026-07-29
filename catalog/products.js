@@ -63,13 +63,11 @@ window.PYP_RES = R;
 window.PYP_CATALOG = {
   whatsapp: "5491122924625",
   categories: [
-    { id: "panificados", name: "Panificados", icon: "wheat", blurb: "Masa madre, panes y chips artesanales de alta rotación." },
-    { id: "pazzi", name: "Panes Pazzi", icon: "beef", blurb: "El auténtico pan de papa: buns y pebetes esponjosos." },
+    { id: "panificados", name: "Panificados", icon: "wheat", blurb: "Masa madre, panes, buns Pazzi y pizzetas artesanales de alta rotación." },
     { id: "galletas", name: "Galletas de Avena", icon: "cookie", blurb: "Mom's: plant based, sin conservantes. Caja surtida y línea proteica." },
     { id: "snacks", name: "Snacks & Crackers", icon: "popcorn", blurb: "Para picar y para el mostrador. 100% artesanal." },
     { id: "dulces", name: "Pastafrolas & Dulces", icon: "cake", blurb: "Pastafrolas, pepas y galletitas artesanales." },
     { id: "alfajores", name: "Alfajores", icon: "candy", blurb: "Alfajores y cuadrados, varios con línea sin TACC." },
-    { id: "pizzetas", name: "Pizzetas", icon: "pizza", blurb: "Bases de pizzeta listas para armar y vender." },
     { id: "miel", name: "Miel Pampa", icon: "hexagon", blurb: "Miel pura de pradera: sólida, líquida y en panal." },
   ],
   products: [
@@ -84,17 +82,22 @@ window.PYP_CATALOG = {
     { id: "mm-parmesanitas", cat: "panificados", brand: "Masa Madre", name: "Parmesanitas", img: R("assets/catalog-pub/masamadre-parmesanitas.png"), desc: "Crackers de masa madre con queso, para picar.", tags: ["Artesanal", "Para picar"], price: 3200 },
     { id: "pz-arabe", cat: "panificados", brand: "Panez", name: "Pan Árabe", img: R("assets/catalog-pub/panez-arabe.png"), desc: "Clásico pan pita para rellenar.", tags: ["Práctico"], price: 2400 },
     { id: "pz-arabe-int", cat: "panificados", brand: "Panez", name: "Pan Árabe Integral", img: R("assets/catalog-pub/panez-arabe-integral.png"), desc: "Versión integral, fuente de fibra.", tags: ["Integral", "Con fibra"], price: 2400 },
-    { id: "pz-sand", cat: "panificados", brand: "Panez", name: "Pan Sandwichero", img: R("assets/catalog-pub/panez-sandwichero.png"), desc: "Tierno y parejo, sin orillas duras.", tags: ["Práctico"], price: 2500 },
+    { id: "pz-sand-semillas", cat: "panificados", brand: "Panez", name: "Pan Sandwichero con Semillas", img: R("assets/catalog-pub/panez-sandwichero-semillas.webp"), desc: "Tierno y parejo, sin orillas duras, con semillas. Paquete x3 unidades.", tags: ["Práctico", "x3"], price: 2500 },
+    { id: "pz-sand-queso", cat: "panificados", brand: "Panez", name: "Pan Sandwichero con Queso", img: R("assets/catalog-pub/panez-sandwichero-queso.webp"), desc: "Tierno y parejo, sin orillas duras, con queso gratinado. Paquete x3 unidades.", tags: ["Práctico", "x3"], price: 2500 },
+    { id: "pz-sand-especias", cat: "panificados", brand: "Panez", name: "Pan Sandwichero con Especias", img: R("assets/catalog-pub/panez-sandwichero-especias.webp"), desc: "Tierno y parejo, sin orillas duras, con especias. Paquete x3 unidades.", tags: ["Práctico", "x3"], price: 2500 },
     { id: "pz-molde-centeno", cat: "panificados", brand: "Panez", name: "Pan de Molde Centeno", img: R("assets/catalog-pub/panez-molde-centeno.webp"), desc: "Pan de molde en fetas, sabor centeno. Rinde más por unidad, para sándwiches.", tags: ["Rinde más", "Integral"], price: 3000 },
     { id: "pz-molde-salvado", cat: "panificados", brand: "Panez", name: "Pan de Molde con Salvado", img: R("assets/catalog-pub/panez-molde-salvado.webp"), desc: "Pan de molde en fetas con salvado. Rinde más por unidad, para sándwiches.", tags: ["Rinde más", "Con fibra"], price: 3000 },
     { id: "pz-molde-integral", cat: "panificados", brand: "Panez", name: "Pan de Molde Integral", img: R("assets/catalog-pub/panez-molde-integral.webp"), desc: "Pan de molde en fetas integral. Rinde más por unidad, para sándwiches.", tags: ["Rinde más", "Integral"], price: 3000 },
-    { id: "pa-chips", cat: "panificados", brand: "Pazzi", name: "Chips Pazzi", img: R("assets/catalog-pub/pazzi-chips.png"), desc: "Chips de pan de papa, para picar. Elegí la variedad.", tags: ["Pan de papa", "Para picar"], price: 1700, variants: [{ name: "Con queso", img: R("assets/catalog-pub/pazzi-chips.png") }, { name: "Tradicional", img: R("assets/catalog-pub/pazzi-chips-tradicional.png") }] },
-
-    // ---- Pazzi ----
-    { id: "pa-burger", cat: "pazzi", brand: "Pazzi", name: "Pan de Hamburguesa Clásico", img: R("assets/catalog-pub/pazzi-burger.png"), desc: "Pan de papa, esponjoso. Contiene 4 unidades.", tags: ["Pan de papa", "x4"], price: 2900 },
-    { id: "pa-queso", cat: "pazzi", brand: "Pazzi", name: "Pan de Hamburguesa con Queso", img: R("assets/catalog-pub/pazzi-burger-queso.png"), desc: "Con queso en la superficie, dorado al horno.", tags: ["Pan de papa", "x4"], price: 3600 },
-    { id: "pa-semillas", cat: "pazzi", brand: "Pazzi", name: "Pan de Hamburguesa con Semillas", img: R("assets/catalog-pub/pazzi-burger-semillas.png"), desc: "Topping de semillas, más textura.", tags: ["Pan de papa", "x4"], price: 3000 },
-    { id: "pa-pebete", cat: "pazzi", brand: "Pazzi", name: "Pebetes", img: R("assets/catalog-pub/pazzi-pebete.png"), desc: "Pebetes de pan de papa, listos para rellenar.", tags: ["Pan de papa"], price: 1700 },
+    { id: "pa-chips-tradicional", cat: "panificados", brand: "Pazzi", name: "Chips Pazzi Tradicional", img: R("assets/catalog-pub/pazzi-chips-tradicional.png"), desc: "Chips de pan de papa, para picar, sabor tradicional.", tags: ["Pan de papa", "Para picar"], price: 1700 },
+    { id: "pa-chips-queso", cat: "panificados", brand: "Pazzi", name: "Chips Pazzi con Queso", img: R("assets/catalog-pub/pazzi-chips.png"), desc: "Chips de pan de papa, para picar, con queso.", tags: ["Pan de papa", "Para picar"], price: 1700 },
+    { id: "pa-burger", cat: "panificados", brand: "Pazzi", name: "Pan de Hamburguesa Clásico", img: R("assets/catalog-pub/pazzi-burger.png"), desc: "Pan de papa, esponjoso. Contiene 4 unidades.", tags: ["Pan de papa", "x4"], price: 2900 },
+    { id: "pa-queso", cat: "panificados", brand: "Pazzi", name: "Pan de Hamburguesa con Queso", img: R("assets/catalog-pub/pazzi-burger-queso.png"), desc: "Con queso en la superficie, dorado al horno.", tags: ["Pan de papa", "x4"], price: 3600 },
+    { id: "pa-semillas", cat: "panificados", brand: "Pazzi", name: "Pan de Hamburguesa con Semillas", img: R("assets/catalog-pub/pazzi-burger-semillas.png"), desc: "Topping de semillas, más textura.", tags: ["Pan de papa", "x4"], price: 3000 },
+    { id: "pa-pebete", cat: "panificados", brand: "Pazzi", name: "Pebetes", img: R("assets/catalog-pub/pazzi-pebete.png"), desc: "Pebetes de pan de papa, listos para rellenar.", tags: ["Pan de papa"], price: 1700 },
+    { id: "pa-pancho-xl-tradicional", cat: "panificados", brand: "Pazzi", name: "Pan de Pancho XL Tradicional", img: R("assets/catalog-pub/pazzi-pancho-xl.webp"), desc: "Panchos packs x 6 u. 85 gr · 5 cm de ancho x 22 cm de largo.", tags: ["Pan de papa", "x6"], price: 4000 },
+    { id: "pa-pancho-xl-semillas", cat: "panificados", brand: "Pazzi", name: "Pan de Pancho XL con Semillas", img: R("assets/catalog-pub/pazzi-pancho-xl-semillas.webp"), desc: "Panchos packs x 6 u. 85 gr · 5 cm de ancho x 22 cm de largo.", tags: ["Pan de papa", "x6"], price: 4100 },
+    { id: "pa-pancho-xl-queso", cat: "panificados", brand: "Pazzi", name: "Pan de Pancho XL con Queso", img: R("assets/catalog-pub/pazzi-pancho-xl-queso.webp"), desc: "Panchos packs x 6 u. 85 gr · 5 cm de ancho x 22 cm de largo.", tags: ["Pan de papa", "x6"], price: 5500 },
+    { id: "to-pizzetas", cat: "panificados", brand: "Tomatito", name: "Pizzetas de Tomate", img: R("assets/catalog-pub/tomatto-pizzetas.png"), desc: "Pizzetas de tomate listas para hornear. Vienen en paquete de 12 unidades.", tags: ["x12"], price: 1650 },
 
     // ---- Galletas Mom's ----
     { id: "mo-surtidas", cat: "galletas", brand: "Mom's", name: "Galletas de Avena Surtidas", img: R("assets/catalog-pub/moms-variedades-hq.webp"), desc: "Caja de 10 unidades surtidas: chocolate, coco, granola, arándanos, mix de frutos secos, pasas de uva, maní con chocolate, cacao y naranja, limón y chocolate blanco.", tags: ["Plant based", "Caja x10 surtida"], price: 12750 },
@@ -111,6 +114,7 @@ window.PYP_CATALOG = {
     { id: "rk-pochoclo", cat: "snacks", brand: "Rakan", name: "Pochoclo", img: R("assets/catalog-pub/rakan-pochoclo.jpeg"), desc: "Pochoclo liviano, 150 g. Ideal para el mostrador.", tags: ["Para picar", "150 g"], price: 2600 },
     { id: "ch-mani-chocolate", cat: "snacks", brand: "Chok", name: "Maní con Chocolate Chok", img: R("assets/catalog-pub/chok-mani-chocolate.webp"), desc: "Maní bañado en chocolate, aprox. 120 g.", tags: ["Para picar", "120 g"], price: 2300 },
     { id: "ch-bocaditos", cat: "snacks", brand: "Chok", name: "Bocaditos Chok", img: R("assets/catalog-pub/chok-bocaditos.webp"), desc: "Bocaditos bañados en chocolate, bolsa x12.", tags: ["Para picar", "Bolsa x12"], price: 4200 },
+    { id: "mm-talitas", cat: "snacks", brand: "Masa Madre", name: "Talitas Masa Madre", img: R("assets/catalog-pub/masamadre-talitas.webp"), desc: "Crackers artesanales de masa madre, 150 g. Elegí el sabor.", tags: ["Artesanal", "150 g"], price: 2700, variants: ["Clásica", "Rúcula-Parmesano", "Tomate-Albahaca", "Multicereal", "Pizza", "Cúrcuma-Pimienta", "Orégano", "Queso-Cebolla", "Calabaza-Curry", "Pimentón", "Queso", "Integral", "Romero-Aceituna"] },
 
     // ---- Pastafrolas & Dulces ----
     { id: "ac-brownie", cat: "dulces", brand: "AC Artesanal", name: "Pastafrola Sabor Brownie", img: R("assets/catalog-pub/ac-frola-brownie.png"), desc: "Masa de cacao, intensa. Sin conservantes.", tags: ["Artesanal", "Sin conservantes"], price: 5100 },
@@ -133,8 +137,8 @@ window.PYP_CATALOG = {
     { id: "jh-merengadas", cat: "dulces", brand: "J. Hosber", name: "Galletitas Merengadas · Frutilla", img: R("assets/catalog-pub/jhosber-frutilla.png"), desc: "Galletitas rellenas sabor frutilla, 195 g.", tags: ["Dulce"], price: 2700 },
 
     // ---- Alfajores ----
-    { id: "ar-alfajor-caja12", cat: "alfajores", brand: "Arroyito", name: "Alfajores Arroyito Caja x12", img: R("assets/catalog-pub/arroyito-alfajores-variedades.webp"), desc: "Caja de 12 unidades del mismo sabor. Elegí la variedad.", tags: ["Artesanal", "Caja x12"], variants: [{ name: "Bomba", price: 51000 }, { name: "Dinámico", price: 42000 }, { name: "Molotov", price: 36000 }] },
-    { id: "ar-alfajor-surtidos", cat: "alfajores", brand: "Arroyito", name: "Alfajores Arroyito Caja x12 Surtidos", img: R("assets/catalog-pub/arroyito-alfajores-variedades.webp"), desc: "Caja de 12 unidades surtidas: Bomba, Dinámico y Molotov.", tags: ["Artesanal", "Caja x12 surtida"], price: 44400 },
+    { id: "ar-alfajor-caja12", cat: "alfajores", brand: "Arroyito", name: "Alfajores Arroyito Caja x12", img: R("assets/catalog-pub/arroyito-alfajores-variedades.webp"), desc: "Caja de 12 unidades del mismo sabor. Elegí la variedad.", tags: ["Artesanal", "Caja x12"], variants: [{ name: "Bomba", price: 51000 }, { name: "Dinamita", price: 42000 }, { name: "Molotov", price: 36000 }] },
+    { id: "ar-alfajor-surtidos", cat: "alfajores", brand: "Arroyito", name: "Alfajores Arroyito Caja x12 Surtidos", img: R("assets/catalog-pub/arroyito-alfajores-variedades.webp"), desc: "Caja de 12 unidades surtidas: Bomba, Dinamita y Molotov.", tags: ["Artesanal", "Caja x12 surtida"], price: 44400 },
     { id: "ch-chocolate", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Chocolate", img: R("assets/catalog-pub/chok-chocolate.png"), desc: "Alfajor artesanal sabor chocolate, pote de ~200 g.", tags: ["Artesanal", "~200 g"], price: 3800 },
     { id: "ch-chispas", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Chocolate con Chispas", img: R("assets/catalog-pub/chok-chispas.png"), desc: "Alfajor artesanal con chispas de chocolate, pote de ~200 g.", tags: ["Artesanal", "~200 g"], price: 3800 },
     { id: "ch-praline", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Chocolate con Praliné", img: R("assets/catalog-pub/chok-praline.png"), desc: "Alfajor artesanal con praliné, pote de ~200 g.", tags: ["Artesanal", "~200 g"], price: 3800 },
@@ -145,9 +149,6 @@ window.PYP_CATALOG = {
     { id: "ch-mixtos", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Mixto", img: R("assets/catalog-pub/chok-mixtos.png"), desc: "Alfajor artesanal surtido, pote de ~200 g.", tags: ["Artesanal", "~200 g"], price: 3800 },
     { id: "ch-conitos", cat: "alfajores", brand: "Chok", name: "Alfajor Chok Conitos", img: R("assets/catalog-pub/chok-conitos.png"), desc: "Alfajor artesanal con conitos, pote de ~200 g.", tags: ["Artesanal", "~200 g"], price: 3800 },
     { id: "altc-alfajor", cat: "alfajores", brand: "Altas Cumbres", name: "Alfajor Cordobés x12", img: R("assets/catalog-pub/altascumbres-variedades.png"), desc: "Caja de 12 alfajores cordobeses, elaboración artesanal. Elegí el sabor.", tags: ["x12", "Artesanal"], price: 19500, variants: ["Higo-Pera", "Dulce de leche", "Membrillo-Durazno"] },
-
-    // ---- Pizzetas ----
-    { id: "to-pizzetas", cat: "pizzetas", brand: "Tomatito", name: "Pizzetas de Tomate", img: R("assets/catalog-pub/tomatto-pizzetas.png"), desc: "Pizzetas de tomate listas para hornear. Vienen en paquete de 12 unidades.", tags: ["x12"], price: 1650 },
 
     // ---- Miel Pampa ----
     { id: "pm-solida", cat: "miel", brand: "Pampa", name: "Miel Pura Sólida", img: R("assets/catalog-pub/pampa-miel-solida.png"), desc: "Miel pura de pradera, cristalizada y untable. Elegí el tamaño. Se entrega por 6 unidades.", tags: ["100% natural", "x6"], variants: [{ name: "¼ kg", price: 19550 }, { name: "½ kg", price: 27550 }, { name: "1 kg", price: 44550 }] },

@@ -152,8 +152,8 @@ window.PYP_CATALOG = {
     { id: "altc-alfajor", cat: "alfajores", brand: "Altas Cumbres", name: "Alfajor Cordobés x12", img: R("assets/catalog-pub/altascumbres-variedades.png"), desc: "Caja de 12 alfajores cordobeses, elaboración artesanal. Elegí el sabor.", tags: ["x12", "Artesanal"], price: 19500, variants: ["Higo-Pera", "Dulce de leche", "Membrillo-Durazno"] },
 
     // ---- Miel Pampa ----
-    { id: "pm-solida", cat: "miel", brand: "Pampa", name: "Miel Pura Sólida", img: R("assets/catalog-pub/pampa-miel-solida.png"), desc: "Miel pura de pradera, cristalizada y untable. Elegí el tamaño. Se entrega por 6 unidades.", tags: ["100% natural", "x6"], variants: [{ name: "¼ kg", price: 19550 }, { name: "½ kg", price: 27550 }, { name: "1 kg", price: 44550 }] },
-    { id: "pm-liquida", cat: "miel", brand: "Pampa", name: "Miel Pura Líquida", img: R("assets/catalog-pub/pampa-miel-liquida.png"), desc: "Miel pura de pradera, fluida y clara. Elegí el tamaño. Se entrega por 6 unidades.", tags: ["100% natural", "x6"], variants: [{ name: "¼ kg", price: 19550 }, { name: "½ kg", price: 27550 }, { name: "1 kg", price: 44550 }] },
-    { id: "pm-panal", cat: "miel", brand: "Pampa", name: "Miel en Panal", img: R("assets/catalog-pub/pampa-miel-panal.png"), desc: "Panal natural en pote, miel pura de pradera.", tags: ["100% natural"], price: 4350 },
+    { id: "pm-solida", cat: "miel", brand: "Pampa", name: "Miel Pura Sólida", img: R("assets/catalog-pub/pampa-miel-solida.png"), desc: "Miel pura de pradera, cristalizada y untable. Elegí el tamaño. Se entrega por 6 unidades.", tags: ["100% natural", "x6"], variants: [{ name: "¼ kg", price: 21100 }, { name: "½ kg", price: 30800 }, { name: "1 kg", price: 49500 }] },
+    { id: "pm-liquida", cat: "miel", brand: "Pampa", name: "Miel Pura Líquida", img: R("assets/catalog-pub/pampa-miel-liquida.png"), desc: "Miel pura de pradera, fluida y clara. Elegí el tamaño. Se entrega por 6 unidades.", tags: ["100% natural", "x6"], variants: [{ name: "¼ kg", price: 21100 }, { name: "½ kg", price: 30800 }, { name: "1 kg", price: 49500 }] },
+    { id: "pm-panal", cat: "miel", brand: "Pampa", name: "Miel en Panal", img: R("assets/catalog-pub/pampa-miel-panal.png"), desc: "Panal natural en pote, miel pura de pradera.", tags: ["100% natural"], price: 4750 },
   ],
 };
